@@ -27,17 +27,17 @@ $ npm install --save-dev get-package-name
 
 ## API
 
-### getPackageName(filePath, [folderName])
+### getPackageName(modulePath, [moduleFolder])
 
 Returns the package name for the given module file path.
 
-#### filePath
+#### modulePath
 
 An absolute or relative path to a module.
 
-#### folderName
+#### moduleFolder
 
-The name of the folder in which dependencies are installed. Defaults to `"node_modules"`.
+The name of the folder in which packages are installed. Defaults to `"node_modules"`.
 
 
 ## License
