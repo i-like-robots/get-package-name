@@ -1,0 +1,28 @@
+{
+  "name": "get-package-name",
+  "version": "0.0.0",
+  "description": "Get the name of a dependency from a module file path.",
+  "main": "index.js",
+  "scripts": {
+    "test:spec": "jasmine tests/spec.js",
+    "test:prettier": "prettier --config .prettierrc.json --list-different **/*.js",
+    "test": "npm run test:prettier && npm run test:spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-like-robots/get-package-name.git"
+  },
+  "author": "Matt Hinchliffe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/i-like-robots/get-package-name/issues"
+  },
+  "homepage": "https://github.com/i-like-robots/get-package-name",
+  "devDependencies": {
+    "jasmine": "^3.4.0",
+    "prettier": "^1.17.0"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  }
+}
