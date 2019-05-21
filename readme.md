@@ -1,5 +1,7 @@
 # Get Package Name
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/i-like-robots/get-package-name.svg)](https://greenkeeper.io/)
+
 Get the name of a dependency from a module file path.
 
 ```js
