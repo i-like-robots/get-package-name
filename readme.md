@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/i-like-robots/get-package-name/blob/master/LICENSE) [![Build Status](https://travis-ci.org/i-like-robots/get-package-name.svg?branch=master)](https://travis-ci.org/i-like-robots/get-package-name) [![npm version](https://img.shields.io/npm/v/get-package-name.svg?style=flat)](https://www.npmjs.com/package/get-package-name) [![Greenkeeper badge](https://badges.greenkeeper.io/i-like-robots/get-package-name.svg)](https://greenkeeper.io/)
 
-Get the name of a dependency from a module file path.
+Extracts the name of a package from its file path.
 
 ```js
 const getPackageName = require('get-package-name')
