@@ -1,6 +1,14 @@
 const subject = require('..')
 
 describe('get-package-name', () => {
+  it('ignores non-string values', () => {
+    const tests = [undefined, null, false]
+
+    tests.forEach((test) => {
+      expect(subject(test)).toBeUndefined()
+    })
+  })
+
   it('ignores non-package paths', () => {
     const tests = ['/absolute/path/to/file.js', './relative/path/to/file.js']
 
