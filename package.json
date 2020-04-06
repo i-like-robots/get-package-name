@@ -20,7 +20,7 @@
   "homepage": "https://github.com/i-like-robots/get-package-name",
   "devDependencies": {
     "jasmine": "^3.4.0",
-    "prettier": "^1.17.0"
+    "prettier": "^2.0.4"
   },
   "engines": {
     "node": ">= 8.0.0"
