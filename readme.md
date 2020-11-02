@@ -12,7 +12,7 @@ getPackageName('./project/node_modules/@babel/parser/lib/index.js') // @babel/pa
 
 ## Installation
 
-This is a [Node.js] package available through the [npm] registry. Before installing, download and install Node.js. Node.js 8 or higher is required.
+This is a [Node.js] package available through the [npm] registry. Before installing, download and install Node.js. Node.js 12 or higher is required.
 
 Installation is done using the [npm install] command:
 
