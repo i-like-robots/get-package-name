@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "Get the name of a dependency from a module file path.",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test:spec": "jasmine tests/spec.js",
     "test:prettier": "prettier --config .prettierrc.json --list-different **/*.js",
