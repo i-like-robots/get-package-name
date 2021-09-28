@@ -60,4 +60,20 @@ describe('get-package-name', () => {
       expect(subject(test, 'bower_components')).toBe('package-name')
     })
   })
+
+  it('should not throw error when pass node_modules', () => {
+    const tests = ['node_modules', '/node_modules', '/path/to/node_modules']
+
+    tests.forEach((test) => {
+      expect(subject(test)).toBe('')
+    })
+  })
+
+  it('should return "" with incomplete scope path', () => {
+    const tests = ['/path/to/node_modules/@scope', '/path/to/node_modules/@scope/']
+
+    tests.forEach((test) => {
+      expect(subject(test)).toBe('')
+    })
+  })
 })

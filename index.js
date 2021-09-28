@@ -11,11 +11,11 @@ module.exports = function getPackageName(modulePath, packageFolder = 'node_modul
     const index = segments.lastIndexOf(packageFolder)
 
     if (index > -1) {
-      const name = segments[index + 1]
+      const name = segments[index + 1] || ''
+      const scopedName = segments[index + 2] || ''
 
       if (name[0] === '@') {
-        const scopedName = segments[index + 2]
-        return `${name}/${scopedName}`
+        return scopedName ? `${name}/${scopedName}` : ''
       } else {
         return name
       }
