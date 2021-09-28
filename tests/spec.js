@@ -17,6 +17,22 @@ describe('get-package-name', () => {
     })
   })
 
+  it('ignores partial scoped paths', () => {
+    const tests = ['/path/to/node_modules/@scope', '/path/to/node_modules/@scope/']
+
+    tests.forEach((test) => {
+      expect(subject(test)).toBeUndefined()
+    })
+  })
+
+  it('does not throw error when given path ends with package folder', () => {
+    const tests = ['node_modules', '/node_modules', '/path/to/node_modules']
+
+    tests.forEach((test) => {
+      expect(subject(test)).toBeUndefined()
+    })
+  })
+
   it('finds shallow nested package names', () => {
     const tests = [
       '/path/to/node_modules/package-name',
@@ -39,7 +55,7 @@ describe('get-package-name', () => {
     })
   })
 
-  it('finds namespaced package names', () => {
+  it('finds scoped package names', () => {
     const tests = [
       '/path/to/node_modules/@namespace/package-name',
       '/path/to/node_modules/@namespace/package-name/folder/file.js'
@@ -58,22 +74,6 @@ describe('get-package-name', () => {
 
     tests.forEach((test) => {
       expect(subject(test, 'bower_components')).toBe('package-name')
-    })
-  })
-
-  it('should not throw error when pass node_modules', () => {
-    const tests = ['node_modules', '/node_modules', '/path/to/node_modules']
-
-    tests.forEach((test) => {
-      expect(subject(test)).toBe('')
-    })
-  })
-
-  it('should return "" with incomplete scope path', () => {
-    const tests = ['/path/to/node_modules/@scope', '/path/to/node_modules/@scope/']
-
-    tests.forEach((test) => {
-      expect(subject(test)).toBe('')
     })
   })
 })

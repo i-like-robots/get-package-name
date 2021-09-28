@@ -15,8 +15,10 @@ module.exports = function getPackageName(modulePath, packageFolder = 'node_modul
       const scopedName = segments[index + 2] || ''
 
       if (name[0] === '@') {
-        return scopedName ? `${name}/${scopedName}` : ''
-      } else {
+        return scopedName ? `${name}/${scopedName}` : undefined
+      }
+
+      if (name) {
         return name
       }
     }
