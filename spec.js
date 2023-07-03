@@ -1,11 +1,13 @@
-const subject = require('..')
+const { describe, it } = require('node:test')
+const assert = require('node:assert')
+const subject = require('./')
 
 describe('get-package-name', () => {
   it('ignores non-string values', () => {
     const tests = [undefined, null, false]
 
     tests.forEach((test) => {
-      expect(subject(test)).toBeUndefined()
+      assert.equal(subject(test), undefined)
     })
   })
 
@@ -13,7 +15,7 @@ describe('get-package-name', () => {
     const tests = ['/absolute/path/to/file.js', './relative/path/to/file.js']
 
     tests.forEach((test) => {
-      expect(subject(test)).toBeUndefined()
+      assert.equal(subject(test), undefined)
     })
   })
 
@@ -21,7 +23,7 @@ describe('get-package-name', () => {
     const tests = ['/path/to/node_modules/@scope', '/path/to/node_modules/@scope/']
 
     tests.forEach((test) => {
-      expect(subject(test)).toBeUndefined()
+      assert.equal(subject(test), undefined)
     })
   })
 
@@ -29,7 +31,7 @@ describe('get-package-name', () => {
     const tests = ['node_modules', '/node_modules', '/path/to/node_modules']
 
     tests.forEach((test) => {
-      expect(subject(test)).toBeUndefined()
+      assert.equal(subject(test), undefined)
     })
   })
 
@@ -40,7 +42,7 @@ describe('get-package-name', () => {
     ]
 
     tests.forEach((test) => {
-      expect(subject(test)).toBe('package-name')
+      assert.equal(subject(test), 'package-name')
     })
   })
 
@@ -51,7 +53,7 @@ describe('get-package-name', () => {
     ]
 
     tests.forEach((test) => {
-      expect(subject(test)).toBe('package-name')
+      assert.equal(subject(test), 'package-name')
     })
   })
 
@@ -62,7 +64,7 @@ describe('get-package-name', () => {
     ]
 
     tests.forEach((test) => {
-      expect(subject(test)).toBe('@namespace/package-name')
+      assert.equal(subject(test), '@namespace/package-name')
     })
   })
 
@@ -73,7 +75,7 @@ describe('get-package-name', () => {
     ]
 
     tests.forEach((test) => {
-      expect(subject(test, 'bower_components')).toBe('package-name')
+      assert.equal(subject(test, 'bower_components'), 'package-name')
     })
   })
 })

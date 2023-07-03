@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "scripts": {
     "test": "npm run verify && npm run spec",
-    "spec": "jasmine tests/spec.js",
+    "spec": "node --test --test-reporter spec spec.js",
     "lint": "eslint .",
     "format": "prettier --write '**/*.{js,json,yml}'",
     "verify": "npm run lint && npm run format",
