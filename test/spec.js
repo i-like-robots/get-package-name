@@ -1,6 +1,6 @@
 const { describe, it } = require('node:test')
 const assert = require('node:assert')
-const subject = require('./')
+const subject = require('../')
 
 describe('get-package-name', () => {
   it('ignores non-string values', () => {

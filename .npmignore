@@ -1,3 +1,5 @@
+test/
+
 .editorconfig
 .eslintignore
 .eslintrc.js
