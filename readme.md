@@ -1,6 +1,6 @@
 # Get Package Name
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/i-like-robots/get-package-name/blob/main/LICENSE) [![Build Status](https://travis-ci.org/i-like-robots/get-package-name.svg?branch=main)](https://travis-ci.org/i-like-robots/get-package-name) [![npm version](https://img.shields.io/npm/v/get-package-name.svg?style=flat)](https://www.npmjs.com/package/get-package-name)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/i-like-robots/get-package-name/blob/main/LICENSE) ![Build Status](https://github.com/i-like-robots/get-package-name/actions/workflows/test.yml/badge.svg?branch=main) [![npm version](https://img.shields.io/npm/v/get-package-name.svg?style=flat)](https://www.npmjs.com/package/get-package-name)
 
 Extracts the name of a package from its file path.
 
